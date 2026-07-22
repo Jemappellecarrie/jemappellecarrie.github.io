@@ -71,7 +71,6 @@ a:focus-visible {
   padding: 48px 0 64px;
   align-items: start;
   column-gap: clamp(44px, 6vw, 74px);
-  grid-template-areas: "sidebar content";
   grid-template-columns: 270px minmax(0, 800px);
 }
 
@@ -79,7 +78,6 @@ a:focus-visible {
   position: sticky;
   top: 28px;
   align-self: start;
-  grid-area: sidebar;
 }
 
 .portrait-placeholder {
@@ -214,7 +212,6 @@ a:focus-visible {
 
 .page-content {
   min-width: 0;
-  grid-area: content;
 }
 
 .about-section p {
@@ -410,9 +407,6 @@ h2 {
     width: min(calc(100% - 36px), 620px);
     padding: 28px 0 52px;
     gap: 36px;
-    grid-template-areas:
-      "sidebar"
-      "content";
     grid-template-columns: 1fr;
   }
 
