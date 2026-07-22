@@ -71,8 +71,8 @@ a:focus-visible {
   padding: 48px 0 64px;
   align-items: start;
   column-gap: clamp(44px, 6vw, 74px);
-  grid-template-areas: "content sidebar";
-  grid-template-columns: minmax(0, 800px) 270px;
+  grid-template-areas: "sidebar content";
+  grid-template-columns: 270px minmax(0, 800px);
 }
 
 .profile-sidebar {
@@ -393,7 +393,7 @@ h2 {
 @media (max-width: 900px) {
   .site-layout {
     column-gap: 38px;
-    grid-template-columns: minmax(0, 1fr) 220px;
+    grid-template-columns: 220px minmax(0, 1fr);
   }
 
   .portrait-placeholder {
