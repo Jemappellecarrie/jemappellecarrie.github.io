@@ -82,54 +82,22 @@ a:focus-visible {
 
 .portrait-placeholder {
   position: relative;
-  display: grid;
   width: 250px;
   max-width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
-  place-items: center;
   border: 1px solid var(--soft);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.82), transparent 52%),
-    #d9e4ec;
-  box-shadow: inset 0 0 0 5px #fff;
+  background: #d9e4ec;
 }
 
-.portrait-placeholder::before,
-.portrait-placeholder::after {
-  position: absolute;
-  background: rgba(41, 128, 185, 0.09);
-  content: "";
-}
-
-.portrait-placeholder::before {
-  width: 1px;
-  height: 72%;
-}
-
-.portrait-placeholder::after {
-  width: 72%;
-  height: 1px;
-}
-
-.portrait-monogram {
-  position: relative;
-  z-index: 1;
-  color: #66859c;
-  font-family: var(--display);
-  font-size: 58px;
-  line-height: 1;
-}
-
-.portrait-label {
-  position: absolute;
-  right: 14px;
-  bottom: 12px;
-  color: #66859c;
-  font-size: 10px;
-  font-weight: 650;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 68%;
+  transform: scale(1.65);
+  transform-origin: 50% 68%;
 }
 
 .profile-copy h1 {
@@ -469,16 +437,6 @@ body.lightbox-open {
     width: 142px;
   }
 
-  .portrait-monogram {
-    font-size: 42px;
-  }
-
-  .portrait-label {
-    right: 9px;
-    bottom: 8px;
-    font-size: 7px;
-  }
-
   .profile-copy h1 {
     margin-top: 0;
   }
@@ -535,14 +493,6 @@ body.lightbox-open {
 
   .portrait-placeholder {
     width: 120px;
-  }
-
-  .portrait-monogram {
-    font-size: 36px;
-  }
-
-  .portrait-label {
-    display: none;
   }
 
   .profile-copy h1 {
