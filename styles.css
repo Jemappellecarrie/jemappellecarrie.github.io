@@ -247,25 +247,6 @@ h2 {
   font-weight: 600;
 }
 
-.section-title-row {
-  position: relative;
-}
-
-.section-title-row h2 {
-  padding-right: 115px;
-}
-
-.preview-status {
-  position: absolute;
-  top: 4px;
-  right: 0;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 .publication {
   display: grid;
   margin: 20px 0 0;
@@ -275,51 +256,27 @@ h2 {
 }
 
 .publication-visual {
-  position: relative;
-  display: grid;
+  display: block;
   width: 208px;
   height: 126px;
   overflow: hidden;
-  place-items: center;
-  background:
-    linear-gradient(155deg, rgba(255, 255, 255, 0.76), transparent 48%),
-    #b9cedd;
+  padding: 4px;
+  border: 1px solid var(--line);
+  background: #fff;
 }
 
-.publication-visual::after {
-  position: absolute;
-  width: 88px;
-  height: 88px;
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 50%;
-  content: "";
+.publication-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.visual-kicker {
-  position: absolute;
-  bottom: 9px;
-  left: 11px;
-  color: #fff;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.visual-mark {
-  position: relative;
-  z-index: 1;
-  color: rgba(255, 255, 255, 0.92);
-  font-family: var(--display);
-  font-size: 35px;
-}
-
-.placeholder-label {
+.publication-status {
   margin: 0 0 3px;
-  color: #a04b32;
-  font-size: 11px;
-  font-weight: 650;
-  letter-spacing: 0.03em;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .publication-copy h3 {
@@ -330,11 +287,25 @@ h2 {
   line-height: 1.35;
 }
 
+.publication-copy h3 a {
+  color: var(--heading);
+}
+
+.publication-copy h3 a:hover {
+  color: var(--link);
+}
+
 .authors,
 .venue,
+.equal-contribution,
 .publication-links {
   margin: 4px 0;
   font-size: 14px;
+}
+
+.equal-contribution {
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .venue {
@@ -346,20 +317,12 @@ h2 {
   margin-top: 8px;
 }
 
-.publication-links span {
+.publication-links a {
   color: var(--link);
 }
 
-.publication-links span + span {
+.publication-links a + a {
   margin-left: 7px;
-}
-
-.publication-note {
-  margin: 18px 0 0;
-  padding-top: 13px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 13px;
 }
 
 .site-footer {
@@ -521,16 +484,6 @@ h2 {
     width: 208px;
     max-width: 100%;
     height: 126px;
-  }
-
-  .section-title-row h2 {
-    padding-right: 0;
-  }
-
-  .preview-status {
-    position: static;
-    display: inline-block;
-    margin: -4px 0 8px;
   }
 
   .footer-inner {
