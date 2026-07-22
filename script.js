@@ -35,3 +35,34 @@ if ("IntersectionObserver" in window && sections.length) {
 
   sections.forEach((section) => observer.observe(section));
 }
+
+const figureTrigger = document.querySelector("[data-lightbox-open]");
+const figureLightbox = document.querySelector("#figure-lightbox");
+const lightboxCloseButtons = figureLightbox
+  ? Array.from(figureLightbox.querySelectorAll("[data-lightbox-close]"))
+  : [];
+
+const closeFigureLightbox = () => {
+  if (!figureLightbox || figureLightbox.hidden) return;
+
+  figureLightbox.hidden = true;
+  document.body.classList.remove("lightbox-open");
+  figureTrigger?.focus();
+};
+
+const openFigureLightbox = () => {
+  if (!figureLightbox) return;
+
+  figureLightbox.hidden = false;
+  document.body.classList.add("lightbox-open");
+  figureLightbox.querySelector(".lightbox-close")?.focus();
+};
+
+figureTrigger?.addEventListener("click", openFigureLightbox);
+lightboxCloseButtons.forEach((button) =>
+  button.addEventListener("click", closeFigureLightbox),
+);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeFigureLightbox();
+});
